@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 import { View } from 'react-native';
 
 import LittleLemonHeader from './components/LittleLemonHeader';
@@ -6,10 +6,17 @@ import LittleLemonFooter from './components/LittleLemonFooter';
 
 export default function App() {
   return (
-    <View style={{flex: 1, backgroundColor: '#495E57', }}>
-      <LittleLemonHeader />
-      <View style={{flex: 0.85}}></View>
-      <LittleLemonFooter />
-    </View>
+    <>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#495E57',
+        }}>
+        <LittleLemonHeader />
+      </View>
+      <View style={{ backgroundColor: '#495E57' }}>
+        <LittleLemonFooter />
+      </View>
+    </>
   );
 }
