@@ -15,6 +15,9 @@ export default function LoginScreen() {
         onChangeText={onChangeEmail}
         placeholder={'email'}
         keyboardType={'email-address'}
+        onFocus={() => {Alert.alert("First name is focussed")}}
+        onBlur={() => {Alert.alert("First name is now blurred")}} 
+        clearButtonMode={"always"} 
       />
       <TextInput
         style={styles.inputBox}
