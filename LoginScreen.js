@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TextInput,
   Pressable,
+  colorScheme,
 } from 'react-native';
 
 export default function LoginScreen() {
@@ -13,7 +14,12 @@ export default function LoginScreen() {
   const [loggedIn, onLogin] = useState(false);
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={[
+      styles.container,
+      colorScheme === 'light'
+        ? { backgroundColor: '#fff' }
+        : { backgroundColor: '#333333' },
+    ]}>
       <Text style={styles.headerText}>Welcome to Little Lemon</Text>
       {loggedIn && <Text style={styles.headerText}>You are logged in!</Text>}
 
