@@ -8,7 +8,7 @@ import {
   colorScheme,
 } from 'react-native';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   const [email, onChangeEmail] = useState('');
   const [password, onChangePassword] = useState('');
   const [loggedIn, onLogin] = useState(false);
@@ -41,7 +41,9 @@ export default function LoginScreen() {
             keyboardType={'default'}
             secureTextEntry={true}
           />
-          <Pressable onPress={() => onLogin(!loggedIn)} style={styles.button}>
+          <Pressable
+            onPress={() => navigation.navigate('Welcome')}
+            style={styles.button}>
             <Text style={styles.buttonText}>Log in</Text>
           </Pressable>
         </>
